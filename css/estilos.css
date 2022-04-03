@@ -1,0 +1,354 @@
+@import url("fonts/stylesheet.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Lato', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #222222;
+    font-weight: bold !important;
+}
+
+p {
+    color: #656565;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+   text-decoration: none;
+}
+
+.nav-link {
+    color: #222222;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-item:hover .nav-link {
+    color: #5C3AE2;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-purple {
+    color: #5C3AE2;
+}
+
+.text-purple:hover {
+    color: #5C3AE2;
+}
+
+header{
+    position: relative;
+    transition: background-color 0.3s ease-in-out;
+}
+
+header#scroll{
+    position: fixed;
+    width: 100%;
+    background-color: #FFC800;
+    z-index: 5;
+}
+
+footer {
+    background-color: #222222;
+}
+
+footer p,
+footer a,
+footer li {
+    color: white;
+}
+
+.btn-purple {
+    background-color: #5C3AE2;
+    color: white !important;
+}
+
+.btn-purple:hover{
+    color: white;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+}
+
+.btn-descargas > picture:last-of-type > img {
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+}
+
+#home [href="#filosofia"]::after {
+    content: url("../assets/abajo-circulo.svg");
+    display: inline-flex;
+    margin-left: 1rem;
+    animation: upNdown 1s infinite ease-in-out;
+}
+
+.btn-descargas a img{
+    transition: 0.3s ease-in-out;
+}
+
+.btn-descargas a:hover img{
+    transform: scale(1.05);
+}
+
+#filosofia-col .btn::after{
+    content: url("../assets/arrow-right-white.svg");
+    display: inline-flex;
+    transform: translate(0,5px);
+    transition: all 0.3s ease-in-out;
+}
+
+#filosofia-col .btn:hover::after{
+    transform: translate(5px,5px);
+}
+
+#deco1,
+#deco2 {
+    display: none;
+}
+
+.btn-overlay-purple {
+    border: 3px solid #5C3AE2;
+    color: #5C3AE2;
+    font-weight: bold;
+    padding: 10px 30px;
+    font-size: 1.5rem;
+    background-color: white;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-overlay-purple:hover {
+    color: white;
+    background-color: #5C3AE2;
+}
+
+#reencuentros {
+    background-color: #FFC800;
+}
+
+.slider-container {
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+    position: relative;
+}
+
+.carta {
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    width: 33.33%;
+    transition: all 400ms ease;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+.carta:hover:not(.active).left {
+    transform: translateX(-50%) rotate(-10deg) scale(0.9);
+}
+
+.carta:hover:not(.active).right {
+    transform: translateX(50%) rotate(10deg) scale(0.9);
+}
+
+.carta.left {
+    transform: translateX(-50%) scale(0.9);
+    mix-blend-mode: luminosity;
+}
+
+.carta.right {
+    transform: translateX(50%) scale(0.9);
+    mix-blend-mode: luminosity;
+}
+
+.carta.active {
+    z-index: 5;
+    position: relative;
+}
+
+.carta-inner {
+    position: relative;
+    padding-bottom: 158.8235294118%;
+}
+
+@media screen and (min-width: 992px){
+    .nav-item {
+        margin: 0 1rem;
+    }
+
+    #home p,
+    #caracteristicas p,
+    #filosofia-col .btn,
+    #filosofia-col p,
+    aside p {
+        font-size: 1.5rem;
+    }
+
+    #home h2.h1 {
+        max-width: 400px;
+    }
+
+    .btn-descargas > a:first-of-type > picture img {
+        padding-top: 9px;
+    }
+
+    .col-md-7  {
+        position: relative;
+    }
+
+    #home .col-md-7 picture:first-of-type {
+        position: absolute;
+        right: 20%;
+        z-index: 2;
+    }
+
+    #hover-phones picture img {
+        transition: all 0.3s ease-in-out;
+        position: relative;
+    }
+
+    #hover-phones picture:first-of-type img {
+        z-index: 1;
+    }
+
+    #hover-phones:hover picture:first-of-type img {
+        transform: rotate(-5deg);
+        z-index: 2;
+    }
+
+    #hover-phones:hover picture:last-of-type img {
+        transform: rotate(5deg);
+        z-index: 1;
+    }
+
+    #filosofia {
+        background-image: url("../assets/desktop/fondo-filosofia-desktop.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: -10vh;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        min-height: 900px;
+    }
+
+    #filosofia-col {
+        margin-left: auto;
+        max-width: 500px;
+    }
+
+    #caracteristicas .row .col-md-6{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #caracteristicas p,
+    #caracteristicas h3{
+        padding: 0 40px;
+    }
+
+    #deco1,
+    #deco2 {
+        display: block;
+    }
+
+    #deco1 {
+        top: 30%;
+        right: 5vw;
+    }
+
+    #deco2 {
+        bottom: 22%;
+        left: 0;
+    }
+
+    footer{
+        padding: 50px 0;
+    }
+
+    footer .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #reencuentros{
+        min-height: 800px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background-size: cover;
+        background-image: url("../assets/desktop/background-reencuentros.jpg");
+        background-repeat: no-repeat;
+        background-position-y: 5%;
+        background-position-x: center;
+    }
+
+    #reencuentros h2{
+        position: relative;
+    }
+
+    #reencuentros h2::after{
+        content: url("../assets/flecha-vuelta.svg");
+        position: absolute;
+        top: -170px;
+    }
+
+    #descargar{
+        background-size: cover;
+        background-image: url("../assets/desktop/background-reencuentros.jpg");
+        background-repeat: no-repeat;
+        background-position-y: 95%;
+        background-position-x: left;
+        background-color: #FAFAFA;
+        min-height: 600px;
+    }
+
+    .descarga{
+        background: #fff;
+        border-radius: 20px;
+        padding: 2em;
+        max-width: 800px;
+        margin: auto;
+        transform: translateY(1em);
+    }
+
+    aside {
+        min-height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@keyframes upNdown {
+    0% {
+       transform: translateY(-2px);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(-2px);
+    }
+}
