@@ -322,7 +322,7 @@ li ol > li:before {
         align-items: center;
         position: relative;
         background-size: cover;
-        background-image: url("../assets/desktop/background-reencuentros.jpg");
+        background-image: url("../assets/desktop/background-reencuentros.png");
         background-repeat: no-repeat;
         background-position-y: 5%;
         background-position-x: center;
@@ -340,11 +340,11 @@ li ol > li:before {
 
     #descargar{
         background-size: cover;
-        background-image: url("../assets/desktop/background-reencuentros.jpg");
+        background-image: url("../assets/desktop/background-reencuentros.png");
         background-repeat: no-repeat;
         background-position-y: 95%;
         background-position-x: left;
-        background-color: #FAFAFA;
+        background-color: #F8F9FA;
         min-height: 600px;
     }
 
@@ -490,6 +490,11 @@ li ol > li:before {
         column-gap: 40px;
         padding: 2rem 1rem;
         position: relative;
+        cursor: grab;
+    }
+
+    .carrusel.active {
+        cursor: grabbing;
     }
 
     .carrusel .row {
@@ -523,22 +528,6 @@ li ol > li:before {
         display: flex;
         justify-content: space-between;
         align-items: center;
-    }
-
-    .navbar-nav {
-        margin-top: 1rem;
-    }
-
-    .nav-item {
-        padding: 10px;
-    }
-
-    .nav-item .nav-link {
-        padding-left: 1rem;
-        background-color: rgba(255,255,255,0.9);
-        border-radius: 5px;
-        text-transform: uppercase;
-        text-align: center;
     }
 }
 
@@ -611,6 +600,22 @@ li ol > li:before {
 
     footer p,
     footer li {
+        text-align: center;
+    }
+
+    .navbar-nav {
+        margin-top: 1rem;
+    }
+
+    .nav-item {
+        padding: 10px;
+    }
+
+    .nav-item .nav-link {
+        padding-left: 1rem;
+        background-color: rgba(255,255,255,0.9);
+        border-radius: 5px;
+        text-transform: uppercase;
         text-align: center;
     }
 }
