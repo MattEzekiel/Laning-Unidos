@@ -75,7 +75,7 @@ footer li {
 }
 
 .btn-purple {
-    background-color: #5C3AE2;
+    background-color: #5C3AE2 !important;
     color: white !important;
 }
 
@@ -523,6 +523,22 @@ li ol > li:before {
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    .navbar-nav {
+        margin-top: 1rem;
+    }
+
+    .nav-item {
+        padding: 10px;
+    }
+
+    .nav-item .nav-link {
+        padding-left: 1rem;
+        background-color: rgba(255,255,255,0.9);
+        border-radius: 5px;
+        text-transform: uppercase;
+        text-align: center;
     }
 }
 
