@@ -386,12 +386,6 @@ li ol > li:before {
         z-index: 1;
     }
 
-    #home .col-md-7 picture:first-of-type {
-        position: absolute;
-        right: 5%;
-        z-index: 2;
-    }
-
     #home .col-md-7 {
         margin-top: 2.5rem;
         width: 100%;
@@ -558,6 +552,12 @@ li ol > li:before {
     .carrusel .col-texto {
         padding: 0 10px;
     }
+
+    #home .row {
+        flex-direction: column;
+        justify-self: center;
+        align-items: center;
+    }
 }
 
 @media screen and (max-width: 576px){
@@ -617,6 +617,12 @@ li ol > li:before {
         border-radius: 5px;
         text-transform: uppercase;
         text-align: center;
+    }
+
+    #hover-phones picture:last-of-type {
+        position: absolute;
+        right: 0;
+        margin-right: auto;
     }
 }
 
