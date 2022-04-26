@@ -364,6 +364,10 @@ li ol > li:before {
         align-items: center;
         flex-direction: column;
     }
+
+    .carrusel .row {
+        align-items: center;
+    }
 }
 
 @media screen and (max-width: 992px) {
