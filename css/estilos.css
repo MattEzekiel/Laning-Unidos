@@ -390,6 +390,14 @@ li ol > li:before {
         z-index: 1;
     }
 
+    #scroll {
+        top: 0;
+    }
+
+    #home {
+        margin-top: 8rem;
+    }
+
     #home .col-md-7 {
         margin-top: 2.5rem;
         width: 100%;
